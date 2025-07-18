@@ -1,0 +1,19 @@
+#-ATAJOS RAPIDOS-#
+npm run dev (arrancar Frontend en desarrollo)
+
+
+
+#---------Env-----------#
+1)Crear env
+  python -m venv env
+
+2)Activar env
+    .\env\Scripts\activate
+
+#--------Frontend--------#
+1)Crear proyecto React + Vite
+  npm create vite@latest
+2)Correr proyecto
+  -cd carpeta
+  -npm install
+  -npm run dev
