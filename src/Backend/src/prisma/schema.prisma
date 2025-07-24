@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User{
+  id          Int     @id @default(autoincrement())
+  email       String  
+  name        String
+  role        String
+  company_id  String
+}
+
+model Property{
+  id          Int     @id @default(autoincrement())
+  name        String
+  address     String 
+  airbnb_id   String
+  owner_id    String
+}
+
+model Reservation {
+  id                        Int     @id @default(autoincrement())
+  property_id               String
+  platform                  String 
+  platform_reservation_id   String
+  check_in                  String
+  check_out                 String
+  guests_count              String
+  total_price               String
+  status                    String
+}
+
+model Client  {
+  id                            Int     @id @default(autoincrement())
+  first_name                    String
+  last_name                     String 
+  email                         String
+  phone                         String
+  nationality                   String
+  document_type                 String
+  document_number               String
+  birth_date                    String
+}
+
+model Contract  {
+  id                           Int     @id @default(autoincrement())
+  reservation_id               String
+  template_id                  String 
+  language                     String
+  status                       String
+  created_at                   String
+}
+
+model Ministry_communication   {
+  id                        Int     @id @default(autoincrement())
+  reservation_id            String
+  type                      String 
+  status                    String
+  sent_at                   String
+  confirmed_at              String
+  error_message             String
+}
+
+model Document{
+  id                   Int     @id @default(autoincrement())
+  client_id            String
+  type                 String 
+  original_filename    String
+  stored_url           String
+  ocr_extracted_data   String
+  verified             String
+}
