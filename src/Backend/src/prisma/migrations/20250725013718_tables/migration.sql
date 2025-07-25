@@ -3,8 +3,9 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "role" TEXT NOT NULL,
-    "company_id" TEXT NOT NULL,
+    "password" TEXT NOT NULL,
+    "role" TEXT,
+    "company_id" TEXT,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
@@ -87,3 +88,6 @@ CREATE TABLE "Document" (
 
     CONSTRAINT "Document_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
