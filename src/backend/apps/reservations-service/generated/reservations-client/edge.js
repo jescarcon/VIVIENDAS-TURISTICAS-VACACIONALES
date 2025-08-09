@@ -160,13 +160,13 @@ const config = {
   "inlineDatasources": {
     "db": {
       "url": {
-        "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "fromEnvVar": null,
+        "value": "postgresql://postgres:root@localhost:5432/reservationdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
-  "inlineSchemaHash": "9c3ed95674f95c1918945db0c05386d12516ed66a8399db73a6fba3b8f61a56f",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/reservationdb\"\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
+  "inlineSchemaHash": "713585a4d78294c841ac8b119ca1d077a2cc98e3e1ddebd8089998a49159bb1f",
   "copyEngine": true
 }
 config.dirname = '/'
@@ -177,9 +177,7 @@ config.engineWasm = undefined
 config.compilerWasm = undefined
 
 config.injectableEdgeEnv = () => ({
-  parsed: {
-    DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.DATABASE_URL || undefined
-  }
+  parsed: {}
 })
 
 if (typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined) {

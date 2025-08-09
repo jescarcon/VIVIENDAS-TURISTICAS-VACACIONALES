@@ -163,13 +163,13 @@ const config = {
   "inlineDatasources": {
     "db": {
       "url": {
-        "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "fromEnvVar": null,
+        "value": "postgresql://postgres:root@localhost:5432/authdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/auth-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id         Int     @id @default(autoincrement())\n  email      String  @unique\n  name       String\n  password   String\n  role       String?\n  company_id String?\n}\n",
-  "inlineSchemaHash": "11eb2ad24005081a95eeb4a59b53074649cb72094d4c427f283b14870b71a1f1",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/auth-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/authdb\"\n}\n\nmodel User {\n  id         Int     @id @default(autoincrement())\n  email      String  @unique\n  name       String\n  password   String\n  role       String?\n  company_id String?\n}\n",
+  "inlineSchemaHash": "381b2daa9f0513b334511acff24420ba579b752d2f0e5e6d845ee5228723b4ea",
   "copyEngine": true
 }
 

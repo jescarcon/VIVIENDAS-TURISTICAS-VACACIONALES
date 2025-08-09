@@ -36,7 +36,7 @@ export default function Register() {
             alert('Usuario creado con éxito. Ya puedes iniciar sesión.');
             navigate('/login');
         } catch (error) {
-            alert('Error en el registro. Revisa los datos e intenta de nuevo.');
+            alert('Error en el registro. Revisa los datos e intenta de nuevo. ' + error);
         }
     };
 
