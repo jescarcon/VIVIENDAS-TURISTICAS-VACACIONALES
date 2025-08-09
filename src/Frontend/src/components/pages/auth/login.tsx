@@ -38,7 +38,6 @@ export default function Login() {
             alert('Error al iniciar sesión. Verifica tus credenciales.');
         }
     };
-
     //#endregion
     
     return (
@@ -52,6 +51,7 @@ export default function Login() {
             {errors.password && <p>{errors.password.message}</p>}
 
             <button type="submit">Entrar</button>
+            
 
             <p>
                 ¿No tienes cuenta?{' '}
