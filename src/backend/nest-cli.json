@@ -28,6 +28,51 @@
         "tsConfigPath": "apps/auth-service/tsconfig.app.json"
       }
     },
+    "clients-service": {
+      "type": "application",
+      "root": "apps/clients-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/clients-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/clients-service/tsconfig.app.json"
+      }
+    },
+    "contracts-service": {
+      "type": "application",
+      "root": "apps/contracts-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/contracts-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/contracts-service/tsconfig.app.json"
+      }
+    },
+    "documents-service": {
+      "type": "application",
+      "root": "apps/documents-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/documents-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/documents-service/tsconfig.app.json"
+      }
+    },
+    "ministry-communications-service": {
+      "type": "application",
+      "root": "apps/ministry-communications-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/ministry-communications-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ministry-communications-service/tsconfig.app.json"
+      }
+    },
+    "properties-service": {
+      "type": "application",
+      "root": "apps/properties-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/properties-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/properties-service/tsconfig.app.json"
+      }
+    },
     "reservations-service": {
       "type": "application",
       "root": "apps/reservations-service",

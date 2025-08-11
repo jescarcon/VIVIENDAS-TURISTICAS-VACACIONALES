@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/properties-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:root@localhost:5432/propertiesdb"
+}
+
+model Property {
+  id       String  @id @default(uuid())
+  name     String
+  address  String
+  airbnbId String?
+  ownerId  String
+}

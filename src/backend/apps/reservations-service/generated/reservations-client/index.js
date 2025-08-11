@@ -158,16 +158,17 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": null,
-        "value": "postgresql://postgres:root@localhost:5432/reservationdb"
+        "value": "postgresql://postgres:root@localhost:5432/reservationsdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/reservationdb\"\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
-  "inlineSchemaHash": "713585a4d78294c841ac8b119ca1d077a2cc98e3e1ddebd8089998a49159bb1f",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/reservationsdb\"\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
+  "inlineSchemaHash": "87da58c0e9d3bbfd6331f1e60af7de94dca5f539190637040f697c3035828758",
   "copyEngine": true
 }
 

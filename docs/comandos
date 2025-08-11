@@ -38,8 +38,8 @@ pip install -r requierements.txt
         npx prisma generate
 
     4.6 Actualizar tablas
-        npx prisma generate --schema=src/prisma/schema.prisma --env-file=apps/.env
-        npx prisma migrate dev --name tables --schema=src/prisma/schema.prisma
+        npx prisma generate --schema=prisma/schema.prisma 
+        npx prisma migrate dev --name tables --schema=prisma/schema.prisma
 
     4.7 Eliminar tablas
         npx prisma migrate reset --schema=src/prisma/schema.prisma

@@ -20,7 +20,9 @@
     "test:e2e": "jest --config ./apps/backend/test/jest-e2e.json",
     "start:api-gateway": "nest start api-gateway",
     "start:auth-service": "nest start auth-service",
-    "start:reservations-service": "nest start reservations-service"
+    "start:reservations-service": "nest start reservations-service",
+    "start:properties-service": "nest start properties-service"
+
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
