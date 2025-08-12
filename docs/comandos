@@ -48,8 +48,9 @@ pip install -r requierements.txt
     npm run start:dev
 
     npm run start:auth-service (arrancar app backend auth-service)
-    npm run start:api-gateway (arrancar app backend api-gateway)
-    npm run start:reservations-service (arrancar app backend api-gateway)
+    npm run start:api-gateway 
+    npm run start:reservations-service
+    npm run start:clients-service 
 
 5) Crea apps
     nest g app api-gateway

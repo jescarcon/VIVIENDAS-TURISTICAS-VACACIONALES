@@ -12,11 +12,13 @@ export class PropertiesController {
       const response = await axios.get(this.propertiesServiceUrl);
       return response.data;
     } catch (error) {
-      console.error('Error fetching reservations:', error.message);
+      console.error('Error fetching properties:', error.message);
       throw new HttpException(
         'Error al obtener las propiedades',
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
+
+
 }
