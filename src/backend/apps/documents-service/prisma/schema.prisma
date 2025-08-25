@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/documents-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:root@localhost:5432/documentsdb"
+}
+
+model Document {
+  id                 String   @id @default(uuid())
+  clientId           String
+  type               String
+  originalFilename   String
+  storedUrl          String
+  ocrExtractedData   Json?
+  verified           Boolean  @default(false)
+
+}

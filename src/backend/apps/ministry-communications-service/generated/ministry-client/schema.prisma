@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/ministry-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:root@localhost:5432/ministrydb"
+}
+
+model Ministry {
+  id            String    @id @default(uuid())
+  reservationId String
+  type          String
+  status        String
+  sentAt        DateTime?
+  confirmedAt   DateTime?
+  errorMessage  String?
+}
