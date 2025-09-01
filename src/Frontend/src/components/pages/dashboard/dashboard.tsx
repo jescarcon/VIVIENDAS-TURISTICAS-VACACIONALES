@@ -1,10 +1,18 @@
+//#region Imports
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {BASE_API_URL} from '../../../constants';
+//#endregion
 
 export default function Dashboard() {
+  //#region Variables
+
   const navigate = useNavigate();
-  const [reservations, setReservations] = useState([]);
+  const [reservations, setReservations] = useState([]); 
+
+  //#endregion
+
+  //#region Logic
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -25,6 +33,8 @@ export default function Dashboard() {
 
     fetchReservations();
   }, []);
+
+  //#endregion
 
   return (
     <div>

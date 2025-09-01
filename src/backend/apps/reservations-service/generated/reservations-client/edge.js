@@ -129,7 +129,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\reservations-service\\generated\\reservations-client",
+      "value": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\reservations-service\\generated\\reservations-client",
       "fromEnvVar": null
     },
     "config": {
@@ -143,7 +143,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\reservations-service\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\reservations-service\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -157,17 +157,16 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": null,
-        "value": "postgresql://postgres:root@localhost:5432/reservationsdb"
+        "value": "postgresql://postgres:23072000Frost.@localhost:5432/reservationsdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/reservationsdb\"\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
-  "inlineSchemaHash": "87da58c0e9d3bbfd6331f1e60af7de94dca5f539190637040f697c3035828758",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/reservations-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:23072000Frost.@localhost:5432/reservationsdb\"\n}\n\nmodel Reservation {\n  id                    String   @id @default(uuid())\n  propertyId            String\n  platform              String\n  platformReservationId String\n  checkIn               DateTime\n  checkOut              DateTime\n  guestsCount           Int\n  totalPrice            Float\n  status                String\n}\n",
+  "inlineSchemaHash": "0fd7ecc60bc62ecf83cefa17ee7adfec160c424e0b9f0b96f379a58dcd8fd7ae",
   "copyEngine": true
 }
 config.dirname = '/'

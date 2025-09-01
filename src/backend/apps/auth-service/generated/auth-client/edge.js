@@ -131,7 +131,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\auth-service\\generated\\auth-client",
+      "value": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\auth-service\\generated\\auth-client",
       "fromEnvVar": null
     },
     "config": {
@@ -145,7 +145,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\auth-service\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\auth-service\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -163,12 +163,12 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": null,
-        "value": "postgresql://postgres:root@localhost:5432/authdb"
+        "value": "postgresql://postgres:23072000Frost.@localhost:5432/authdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/auth-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/authdb\"\n}\n\nmodel User {\n  id         Int     @id @default(autoincrement())\n  email      String  @unique\n  name       String\n  password   String\n  role       String?\n  company_id String?\n}\n",
-  "inlineSchemaHash": "381b2daa9f0513b334511acff24420ba579b752d2f0e5e6d845ee5228723b4ea",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/auth-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:23072000Frost.@localhost:5432/authdb\"\n}\n\nmodel User {\n  id         Int     @id @default(autoincrement())\n  email      String  @unique\n  name       String\n  password   String\n  role       String?\n  company_id String?\n}\n",
+  "inlineSchemaHash": "7ffcd8d30dc9f97246d88ff7954307b8fc649335f1bdb1937c79794fec0e01a0",
   "copyEngine": true
 }
 config.dirname = '/'
