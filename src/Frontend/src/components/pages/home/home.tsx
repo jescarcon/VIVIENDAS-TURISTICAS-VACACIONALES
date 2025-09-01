@@ -1,5 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import CustomNavbar from '../../utils/navbar/navbar';
+import image1 from '/images/home/friends.jpg';
+import { CustomFooter } from '../../utils/footer/footer';
 
 export default function Home() {
     //#region Variables
@@ -7,23 +10,18 @@ export default function Home() {
     //#endregion
 
     //#region Logic
-    
-    const goToLogin = () => {
-        navigate('/login');
-    };
 
-    const goToRegister = () => {
-        navigate('/register');
-    };
 
     //#endregion
-    
-    
+
+
     return (
-        <div>
-            <h1>Bienvenido a la app</h1>
-            <button onClick={goToLogin}>Iniciar sesión</button>
-            <button onClick={goToRegister}>Crear cuenta</button>
+        <div className='home-container'>
+            <div className='navbar-component'><CustomNavbar /></div>
+            <div className='home-body'>
+                    <h1>Contenido del home</h1>
+            </div>
+            <div className='footer-component'><CustomFooter/></div>
         </div>
     );
 }
