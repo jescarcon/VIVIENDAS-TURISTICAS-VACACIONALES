@@ -17,8 +17,8 @@ export default function Reservations() {
             try {
                 const res = await axios.get("http://localhost:3000/reservations");
                 setReservations(res.data);
-            } catch (error) {
-                setError(error.message);
+            } catch (e) {
+                setError(e.message);
             }finally{
                 setLoading(false);
             }
@@ -27,9 +27,6 @@ export default function Reservations() {
 
         getReservations();
     }, []);
-
-
-
 
     //#endregion
 
@@ -51,6 +48,8 @@ export default function Reservations() {
                     </tr>
                 ))}
             </table>
+
+            <div>Error: {error} </div>
         </div>
     )
 }
