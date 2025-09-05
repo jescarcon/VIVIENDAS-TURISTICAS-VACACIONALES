@@ -1,30 +1,43 @@
-import { Controller, Get, HttpException, HttpStatus, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+// documents.controller.ts
+import {
+  Controller,
+  Post,
+  Get,
+  Body,
+  UploadedFile,
+  UseInterceptors,
+  Header,
+  HttpException,
+  HttpStatus
+} from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import * as multer from 'multer';
 import { DocumentsService } from './documents.service';
 
-@Controller('documents') 
+@Controller('documents')
 export class DocumentsController {
   constructor(private readonly documentsService: DocumentsService) {}
-
+  
   @Get()
   async getDocuments() {
     return this.documentsService.findAll();
   }
-
+  
   @Post('upload')
-  @UseInterceptors(FileInterceptor('file', {storage: multer.memoryStorage()} ))
-  async uploadDocument(@UploadedFile() file: Express.Multer.File) {
+  @UseInterceptors(FileInterceptor('file'))
+  async uploadFile(@UploadedFile() file: Express.Multer.File) {
     if (!file) {
-      throw new HttpException('No se ha subido ningún archivo', HttpStatus.BAD_REQUEST);
+      throw new HttpException('No se envió ningún archivo', HttpStatus.BAD_REQUEST);
     }
+    return this.documentsService.extractTextFromBuffer(file.buffer);
+  }
 
-    try {
-      const extractedText = await this.documentsService.extractTextFromBuffer(file.buffer);
-      return { extractedText };
-    } catch (error) {
-      console.error('Error en OCR:', error);
-      throw new HttpException('Error procesando OCR', HttpStatus.INTERNAL_SERVER_ERROR);
+  @Post('export-xml')
+  @Header('Content-Type', 'application/xml')
+  @Header('Content-Disposition', 'attachment; filename="document.xml"')
+  exportXml(@Body() body: any): string {
+    if (!body) {
+      throw new HttpException('No se ha enviado contenido para exportar', HttpStatus.BAD_REQUEST);
     }
+    return this.documentsService.generateXml(body);
   }
 }

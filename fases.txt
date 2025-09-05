@@ -1,4 +1,0 @@
-############ Fases ############
-1) Instalar JWT BCRYPT y ZOD para la autentificacion 
-    npm install @nestjs/jwt jsonwebtoken bcrypt zod
-    npm install -D @types/bcrypt

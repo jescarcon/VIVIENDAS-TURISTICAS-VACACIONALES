@@ -143,7 +143,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\documents-service\\generated\\documents-client",
+      "value": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\documents-service\\generated\\documents-client",
       "fromEnvVar": null
     },
     "config": {
@@ -157,7 +157,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\jesus\\Desktop\\Workspace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\documents-service\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\uraha\\Desktop\\WorkSpace-Fran\\VIVIENDAS-TURISTICAS-VACACIONALES\\src\\Backend\\apps\\documents-service\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -175,12 +175,12 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": null,
-        "value": "postgresql://postgres:root@localhost:5432/documentsdb"
+        "value": "postgresql://postgres:23072000Frost.@localhost:5432/documentsdb"
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/documents-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:root@localhost:5432/documentsdb\"\n}\n\nmodel Document {\n  id               String  @id @default(uuid())\n  clientId         String\n  type             String\n  originalFilename String\n  storedUrl        String\n  ocrExtractedData Json?\n  verified         Boolean @default(false)\n}\n",
-  "inlineSchemaHash": "b1fbe2d00e7c556ec89b71129ca305f4a33cb3cf872cfd4c09daab57f9d498d8",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/documents-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgresql://postgres:23072000Frost.@localhost:5432/documentsdb\"\n}\n\nmodel Document {\n  id               String  @id @default(uuid())\n  clientId         String\n  type             String\n  originalFilename String\n  storedUrl        String\n  ocrExtractedData Json?\n  verified         Boolean @default(false)\n}\n",
+  "inlineSchemaHash": "1600ceb74e79318006806b28af09f19d83d39e14089bb7c99e2b9c48ac2649bd",
   "copyEngine": true
 }
 config.dirname = '/'
