@@ -21,7 +21,7 @@ export class DocumentsController {
   async getDocuments() {
     return this.documentsService.findAll();
   }
-  
+
   @Post('upload')
   @UseInterceptors(FileInterceptor('file'))
   async uploadFile(@UploadedFile() file: Express.Multer.File) {
@@ -38,6 +38,6 @@ export class DocumentsController {
     if (!body) {
       throw new HttpException('No se ha enviado contenido para exportar', HttpStatus.BAD_REQUEST);
     }
-    return this.documentsService.generateXml(body);
+    return this.documentsService.generateXml(body.solicitud);
   }
 }
